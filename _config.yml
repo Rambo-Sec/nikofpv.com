@@ -1,0 +1,16 @@
+title: Niko FPV
+description: FPV content, short clips, and simple flying notes.
+url: "https://nikofpv.com"
+baseurl: ""
+
+email: hello@nikofpv.com
+youtube_url: "https://www.youtube.com/@thenikofpv"
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

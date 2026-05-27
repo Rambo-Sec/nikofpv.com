@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Niko FPV home">
+        <img src="{{ '/assets/images/logo-trans.png' | relative_url }}" alt="Niko FPV">
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-row">
+      <div>Niko FPV</div>
+
+      <div class="footer-links">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="{{ site.youtube_url }}">YouTube</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
