@@ -126,7 +126,7 @@
     }
 
     var url = "https://www.googleapis.com/youtube/v3/playlistItems"
-      + "?part=snippet&maxResults=6"
+      + "?part=snippet&maxResults=7"
       + "&playlistId=" + encodeURIComponent(cfg.uploadsPlaylistId)
       + "&key=" + encodeURIComponent(cfg.youtubeApiKey);
 
