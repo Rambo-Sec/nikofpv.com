@@ -8,17 +8,15 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Niko FPV home">
-        <img src="{{ '/assets/images/logo-trans.png' | relative_url }}" alt="Niko FPV">
-      </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="{{ '/#contact' | relative_url }}">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <script>
+    // Handed to main.js. youtubeApiKey is a browser (HTTP-referrer restricted)
+    // key, so it's fine for it to live in the built HTML - see SETUP.md.
+    window.NIKO_CONFIG = {
+      youtubeApiKey: {{ site.youtube_api_key | jsonify }},
+      uploadsPlaylistId: {{ site.youtube_uploads_playlist | jsonify }},
+      channelUrl: {{ site.youtube_url | jsonify }}
+    };
+  </script>
 
   {{ content }}
 
@@ -27,10 +25,13 @@
       <div>Niko FPV</div>
 
       <div class="footer-links">
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        <a href="{{ site.youtube_url }}">YouTube</a>
+        <a class="button" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a class="button" href="{{ site.youtube_url }}">YouTube</a>
+        <a class="button" href="{{ site.tiktok_url }}">TikTok</a>
       </div>
     </div>
   </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>

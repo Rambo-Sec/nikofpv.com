@@ -9,14 +9,26 @@ title: Home
 
     <img class="hero-logo" src="{{ '/assets/images/logo-trans.png' | relative_url }}" alt="Niko FPV">
 
-    <p class="eyebrow">FPV content</p>
-
-    <p class="lede">
-      More FPV videos, short clips, and simple flying notes coming soon.
-    </p>
-
     <div class="actions">
       <a class="button" href="{{ site.youtube_url }}">YouTube channel</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">From the channel</p>
+      <h2 class="section-title">Latest Flight</h2>
+    </div>
+
+    <div id="latest-flight" class="latest-flight">
+      <p class="loading-line">Loading&hellip;</p>
+    </div>
+
+    <div class="more-flights">
+      <h3 class="subheading">More Flights</h3>
+      <div id="flights-grid" class="flights-grid">
+        <p class="loading-line">Loading&hellip;</p>
+      </div>
     </div>
   </section>
 </main>

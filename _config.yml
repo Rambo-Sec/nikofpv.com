@@ -5,6 +5,11 @@ baseurl: ""
 
 email: hello@nikofpv.com
 youtube_url: "https://www.youtube.com/@thenikofpv"
+tiktok_url: "https://www.tiktok.com/@thenikofpv"
+
+# Used by assets/js/main.js to pull the latest uploads client-side.
+youtube_uploads_playlist: "UUozoyRcgRsH2D_FxLsL6__w"
+youtube_api_key: "AIzaSyDEKNH-JZO9m-xyQcLTajd6ZJ12SZbKYII"
 
 markdown: kramdown
 permalink: pretty
@@ -13,4 +18,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - SETUP.md
   - vendor
